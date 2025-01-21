@@ -10,7 +10,7 @@ public class MarketplaceRabbitmqIntegrationApplication {
 		SpringApplication.run(MarketplaceRabbitmqIntegrationApplication.class, args);
 		System.out.println(
 			"\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" +
-			"\nO sistema foi iniciado... port: 8080" +
+			"\nO sistema foi iniciado... port: 9090" +
 			"\nBem vindo ao projeto Marketplace Rabbit MQ Api" + 
 			"\nO objetivo deste projeto é implementar um sistema de integração utilizando o RabbitMQ, uma ferramenta de mensageria amplamente utilizada para comunicação entre sistemas e troca de informações de maneira assíncrona e escalável." + 
 			"\nAcesse as funções do projeto de chamadas para as urls:  " + 
