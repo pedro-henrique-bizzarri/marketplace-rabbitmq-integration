@@ -18,8 +18,8 @@ public class PagamentoConsumer {
     @RabbitListener(queues = RabbitMQConstants.QUEUE_PAYMENT)
     public void consumirFilaPagamento(String pagamentoJson) throws InterruptedException{
         System.out.println(
-            "\nO sistema recebeu uma mensagem do RabbitMQ, fila: " + RabbitMQConstants.QUEUE_PAYMENT +
-            "\nPagamento: " + pagamentoJson);
+            "\n" + RabbitMQConstants.getDataHoraAtualSistema() +  " O sistema recebeu uma mensagem do RabbitMQ, fila: " + RabbitMQConstants.QUEUE_PAYMENT +
+            "\n" + RabbitMQConstants.getDataHoraAtualSistema() + " Pagamento: " + pagamentoJson + "\n");
 
         Pagamento pagamento = new Gson().fromJson(pagamentoJson, Pagamento.class);
         pagamentoBancarioService.integrarPagamentoBancario(pagamento);
